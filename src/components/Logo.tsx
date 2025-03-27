@@ -47,7 +47,7 @@ export function Logo({
   filled = false,
   fillOnHover = false,
   ...props
-}: React.ComponentPropsWithoutRef<'svg'> & {
+}: React.ComponentPropsWithoutRef<'div'> & {
   invert?: boolean
   filled?: boolean
   fillOnHover?: boolean
