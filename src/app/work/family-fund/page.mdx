@@ -1,0 +1,57 @@
+import logo from '@/images/clients/family-fund/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageDebraFiscal from './debra-fiscal.jpg'
+
+export const caseStudy = {
+  client: 'Ejendomshandler',
+  title: 'Specialister i ejendomshandler',
+  description:
+    'Vi er specialister i ejendomshandler og hjælper vores klienter med at navigere i komplekse ejendomstransaktioner.',
+  summary: [
+    'Vi er specialister i ejendomshandler og hjælper vores klienter med at navigere i komplekse ejendomstransaktioner.',
+    'Vores erfaring og ekspertise sikrer den bedste rådgivning og sikkerhed for vores klienters ejendomshandler.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-03',
+  service: 'Ejendomshandler',
+  testimonial: {
+    author: { name: 'Samer Hussein Younes', role: 'Advokat' },
+    content:
+      'Vi er dedikerede til at sikre den bedste rådgivning og sikkerhed for vores klienters ejendomshandler. Vores erfaring og ekspertise inden for ejendomsret giver os mulighed for at levere den bedste løsning.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Sagstype`,
+  description: caseStudy.description,
+}
+
+## Oversigt
+
+Vi er specialister i ejendomshandler og har mange års erfaring med at håndtere komplekse ejendomstransaktioner. Vores team af erfarne advokater sikrer, at vores klienter får den bedste rådgivning og sikkerhed.
+
+Vi arbejder med alle aspekter af ejendomshandler, herunder køb og salg af fast ejendom, lejekontrakter og ejendomsudvikling. Vores dedikation til vores klienter og deres ejendomshandler er central i vores arbejde.
+
+## Hvad vi gør
+
+<TagList>
+  <TagListItem>Ejendomshandler</TagListItem>
+  <TagListItem>Fast ejendom</TagListItem>
+  <TagListItem>Lejekontrakter</TagListItem>
+  <TagListItem>Ejendomsudvikling</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Samer Hussein Younes', role: 'Advokat' }}
+  image={{ src: imageDebraFiscal }}
+>
+  Vi er dedikerede til at sikre den bedste rådgivning og sikkerhed for vores klienters ejendomshandler. Vores erfaring og ekspertise inden for ejendomsret giver os mulighed for at levere den bedste løsning.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="5" label="Erfarne advokater" />
+  <StatListItem value="1000+" label="Tilfredse klienter" />
+  <StatListItem value="10000+" label="Håndterede sager" />
+  <StatListItem value="100%" label="Dedikation" />
+</StatList>

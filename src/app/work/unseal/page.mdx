@@ -1,0 +1,57 @@
+import logo from '@/images/clients/unseal/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageEmilySelman from './emily-selman.jpg'
+
+export const caseStudy = {
+  client: 'Retssager (procedure)',
+  title: 'Specialister i retssager og procedure',
+  description:
+    'Vi er specialister i retssager og procedure, og hjælper vores klienter med at navigere i komplekse juridiske processer.',
+  summary: [
+    'Vi er specialister i retssager og procedure, og hjælper vores klienter med at navigere i komplekse juridiske processer.',
+    'Vores erfaring og ekspertise sikrer den bedste procesgang og retssikkerhed for vores klienter.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-03',
+  service: 'Retssager og procedure',
+  testimonial: {
+    author: { name: 'Karsten Rifbjerg Erichsen', role: 'Advokat' },
+    content:
+      'Vi er dedikerede til at sikre den bedste procesgang og retssikkerhed for vores klienter. Vores erfaring og ekspertise inden for retssager giver os mulighed for at levere den bedste rådgivning.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Sagstype`,
+  description: caseStudy.description,
+}
+
+## Oversigt
+
+Vi er specialister i retssager og procedure og har mange års erfaring med at håndtere komplekse juridiske processer. Vores team af erfarne advokater sikrer, at vores klienter får den bedste procesgang og retssikkerhed.
+
+Vi arbejder med alle aspekter af retssager og procedure, herunder civile sager, administrative sager og forvaltningsret. Vores dedikation til vores klienter og deres retssikkerhed er central i vores arbejde.
+
+## Hvad vi gør
+
+<TagList>
+  <TagListItem>Retssager</TagListItem>
+  <TagListItem>Procedure</TagListItem>
+  <TagListItem>Civile sager</TagListItem>
+  <TagListItem>Administrative sager</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Karsten Rifbjerg Erichsen', role: 'Advokat' }}
+  image={{ src: imageEmilySelman }}
+>
+  Vi er dedikerede til at sikre den bedste procesgang og retssikkerhed for vores klienter. Vores erfaring og ekspertise inden for retssager giver os mulighed for at levere den bedste rådgivning.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="5" label="Erfarne advokater" />
+  <StatListItem value="1000+" label="Tilfredse klienter" />
+  <StatListItem value="10000+" label="Håndterede sager" />
+  <StatListItem value="100%" label="Dedikation" />
+</StatList>

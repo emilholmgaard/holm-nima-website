@@ -1,0 +1,50 @@
+import logo from '@/images/clients/bright-path/logomark-dark.svg'
+import imageHero from '../phobia/hero.jpg'
+import imageNima from '@/images/team/nima.webp'
+
+export const caseStudy = {
+  client: 'Strafferet',
+  title: 'Specialister i strafferet',
+  description:
+    'Vi er specialister i strafferet og hjælper vores klienter med at navigere i komplekse straffesager.',
+  summary: [
+    'Vi er specialister i strafferet og hjælper vores klienter med at navigere i komplekse straffesager.',
+    'Vores erfaring og ekspertise sikrer den bedste forsvarsstrategi og retssikkerhed for vores klienter.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-03',
+  service: 'Strafferet',
+  testimonial: {
+    author: { name: 'Nima Nabipour', role: 'Advokat (H)' },
+    content:
+      'Vi er dedikerede til at sikre den bedste forsvarsstrategi og retssikkerhed for vores klienter. Vores erfaring og ekspertise inden for strafferet giver os mulighed for at levere den bedste rådgivning.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Sagstype`,
+  description: caseStudy.description,
+}
+
+## Oversigt
+
+Vi er specialister i strafferet og har mange års erfaring med at håndtere komplekse straffesager. Vores team af erfarne advokater sikrer, at vores klienter får den bedste forsvarsstrategi og retssikkerhed.
+
+Vi arbejder med alle aspekter af strafferet, herunder vold, narkotika, økonomisk kriminalitet og andre alvorlige straffesager. Vores dedikation til vores klienter og deres retssikkerhed er central i vores arbejde.
+
+## Hvad vi gør
+
+<TagList>
+  <TagListItem>Strafferet</TagListItem>
+  <TagListItem>Vold</TagListItem>
+  <TagListItem>Narkotika</TagListItem>
+  <TagListItem>Økonomisk kriminalitet</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Nima Nabipour', role: 'Advokat (H)' }}
+  image={{ src: imageNima }}
+>
+  Vi er dedikerede til at sikre den bedste forsvarsstrategi og retssikkerhed for vores klienter. Vores erfaring og ekspertise inden for strafferet giver os mulighed for at levere den bedste rådgivning.
+</Blockquote> 
