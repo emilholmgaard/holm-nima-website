@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -38,6 +40,7 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.9.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "prettier": "^3.3.2",
