@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
+    "pages:dev": "npx wrangler pages dev .vercel/output/static",
+    "pages:watch": "npx @cloudflare/next-on-pages --watch"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -40,9 +42,10 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.9.0",
+    "@cloudflare/next-on-pages": "^1.13.10",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "eslint-plugin-next-on-pages": "^1.13.10",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "0.33.1"
