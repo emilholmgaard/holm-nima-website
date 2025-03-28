@@ -132,9 +132,32 @@ export function Footer() {
           <Link href="/" aria-label="Hjem">
             <Logo className="h-8" fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-700">
-            © NIMA Advokater {new Date().getFullYear()}
-          </p>
+          <div className="flex gap-12">
+            <div className="text-sm text-neutral-700">
+              <p>Lån & Spar Bank, reg.nr. 0400</p>
+              <p>konto: 4023 392 602</p>
+            </div>
+            <div className="text-sm text-neutral-700">
+              <p>Rolighedsvej 11, 1. sal</p>
+              <p>1958 Frederiksberg C</p>
+            </div>
+            <div className="text-sm text-neutral-700">
+              <p>Nima Nabipour Advokatfirma ApS</p>
+              <p>
+                <a 
+                  href="https://datacvr.virk.dk/enhed/virksomhed/41592427?fritekst=41592427&sideIndex=0&size=10" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-neutral-950 transition"
+                >
+                  CVR: 41592427
+                </a>
+              </p>
+            </div>
+            <div className="text-sm text-neutral-700">
+              <p>© NIMA Advokater {new Date().getFullYear()}</p>
+            </div>
+          </div>
         </div>
       </FadeIn>
     </Container>

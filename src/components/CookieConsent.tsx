@@ -35,7 +35,7 @@ const cookieCategories: CookieCategory[] = [
     description: 'Disse cookies er nødvendige for at hjemmesiden kan fungere korrekt.',
     providers: [
       {
-        name: 'NIMA Advokater',
+        name: 'Nima Nabipour Advokatfirma',
         cookies: [
           {
             name: 'session_id',
@@ -162,25 +162,33 @@ export function CookieConsent() {
                   <h3 className="text-xl font-semibold text-neutral-950 mb-2">
                     Cookie-indstillinger
                   </h3>
-                  <p className="text-sm text-neutral-600 mb-4">
-                    Vi bruger cookies for at forbedre din oplevelse på vores hjemmeside. 
-                    Du kan vælge, hvilke cookies du vil acceptere. 
-                    Læs mere i vores <Link href="/privatlivspolitik" className="text-blue-950 hover:underline">privatlivspolitik</Link>.
-                  </p>
+                  <div className="text-sm text-neutral-600 space-y-3">
+                    <p>
+                      Vi bruger cookies for at forbedre din oplevelse på vores hjemmeside. 
+                      Nogle cookies er nødvendige for at hjemmesiden kan fungere, mens andre hjælper os med at forbedre vores tjenester.
+                    </p>
+                    <p>
+                      Du kan til enhver tid ændre eller tilbagetrække dit samtykke. 
+                      Læs mere i vores <Link href="/privatlivspolitik" className="text-blue-950 hover:underline">privatlivspolitik</Link>.
+                    </p>
+                    <p>
+                      Dit samtykke gælder for: nima.dk
+                    </p>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
                   {cookieCategories.map((category) => (
                     <div key={category.id} className="border border-neutral-200 rounded-lg p-4">
                       <div className="flex items-center justify-between">
-                        <div>
+                        <div className="flex-1 min-w-0">
                           <h4 className="font-medium text-neutral-950">{category.title}</h4>
                           <p className="text-sm text-neutral-600">{category.description}</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 ml-4 flex-shrink-0">
                           <button
                             onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
-                            className="text-sm text-blue-950 hover:underline"
+                            className="text-sm text-blue-950 hover:underline whitespace-nowrap"
                           >
                             {expandedCategory === category.id ? 'Skjul detaljer' : 'Se detaljer'}
                           </button>
@@ -189,7 +197,7 @@ export function CookieConsent() {
                             checked={preferences[category.id] as boolean}
                             onChange={() => toggleCategory(category.id)}
                             disabled={category.id === 'necessary'}
-                            className="h-4 w-4 rounded border-neutral-300 text-blue-950 focus:ring-blue-950"
+                            className="h-5 w-5 rounded border-neutral-300 text-blue-950 focus:ring-blue-950 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                           />
                         </div>
                       </div>
@@ -276,9 +284,23 @@ export function CookieConsent() {
       {/* Cookie Settings Button */}
       <button
         onClick={withdrawConsent}
-        className="fixed bottom-4 right-4 rounded-full bg-neutral-100 px-4 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200 z-40"
+        className="fixed bottom-4 right-4 w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center transition hover:bg-neutral-200 z-40"
+        aria-label="Cookie-indstillinger"
       >
-        Cookie-indstillinger
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-neutral-950"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
       </button>
     </AnimatePresence>
   )
