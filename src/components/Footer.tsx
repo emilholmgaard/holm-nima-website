@@ -27,7 +27,7 @@ const navigation = [
     links: [
       { title: 'Om os', href: '/about' },
       { title: 'Forløb', href: '/process' },
-      { title: 'Seneste', href: '/blog' },
+      { title: 'Seneste resultater', href: '/blog' },
       { title: 'Praktisk info', href: '/praktisk-info' },
       { title: 'Privatlivspolitik', href: '/privatlivspolitik' },
       { title: 'Kontakt', href: '/contact' },
