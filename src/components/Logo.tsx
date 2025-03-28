@@ -60,7 +60,7 @@ export function Logo({
         width={923}
         height={314}
         className={clsx(
-          'h-12 w-auto',
+          'h-16 w-auto',
           invert ? 'brightness-0 invert' : ''
         )}
       />
