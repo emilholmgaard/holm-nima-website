@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 
 import { RootLayout } from '@/components/RootLayout'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { CookieConsent } from '@/components/CookieConsent'
 
 import '@/styles/tailwind.css'
 
@@ -20,6 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
+        <CookieConsent />
       </body>
     </html>
   )
