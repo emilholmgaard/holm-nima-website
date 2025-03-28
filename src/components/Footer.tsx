@@ -27,13 +27,22 @@ const navigation = [
     links: [
       { title: 'Om os', href: '/about' },
       { title: 'Forløb', href: '/process' },
-      { title: 'Nyheder', href: '/blog' },
+      { title: 'Seneste', href: '/blog' },
+      { title: 'Praktisk info', href: '/praktisk-info' },
+      { title: 'Privatlivspolitik', href: '/privatlivspolitik' },
       { title: 'Kontakt', href: '/contact' },
     ],
   },
   {
     title: 'Kontakt',
-    links: socialMediaProfiles,
+    links: [
+      ...socialMediaProfiles,
+      { 
+        title: 'Google Anmeldelse', 
+        href: 'https://g.page/r/CcO7G7XfR4hzEAE/review',
+        icon: undefined 
+      },
+    ],
   },
 ]
 
