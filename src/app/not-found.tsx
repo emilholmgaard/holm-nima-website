@@ -11,16 +11,16 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-4 font-display text-2xl font-semibold text-neutral-950">
-          Page not found
+          Side ikke fundet
         </h1>
         <p className="mt-2 text-sm text-neutral-600">
-          Sorry, we couldn’t find the page you’re looking for.
+          Beklager, den side du leder efter kunne ikke findes.
         </p>
         <Link
           href="/"
           className="mt-4 text-sm font-semibold text-neutral-950 transition hover:text-neutral-700"
         >
-          Go to the home page
+          Gå til forsiden
         </Link>
       </FadeIn>
     </Container>

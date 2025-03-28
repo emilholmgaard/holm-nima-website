@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Border } from '@/components/Border'
 import { ContactSection } from '@/components/ContactSection'
@@ -138,20 +139,22 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            {...person.image}
-                            className="h-96 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
+                        <Link href={`/about/${person.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                          <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                            <Image
+                              {...person.image}
+                              className="h-96 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent p-6">
+                              <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                                {person.name}
+                              </p>
+                              <p className="mt-2 text-sm text-white">
+                                {person.role}
+                              </p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </FadeIn>
                     </li>
                   ))}
