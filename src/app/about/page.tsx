@@ -96,18 +96,13 @@ const team = [
     ],
   },
   {
-    title: 'Sekræterer',
+    title: 'Backoffice',
     people: [
       {
         name: 'Charlotte Holmgaard',
         role: 'Sekretær',
         image: { src: charlotte, alt: 'Charlotte Holmgaard' },
       },
-    ],
-  },
-  {
-    title: 'Stud jr',
-    people: [
       {
         name: 'Kamilla',
         role: 'Stud jr',
@@ -129,13 +124,13 @@ function Team() {
         {team.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
+            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16">
               <FadeIn>
                 <h2 className="font-display text-2xl font-semibold text-neutral-950">
                   {group.title}
                 </h2>
               </FadeIn>
-              <div className="lg:col-span-3">
+              <div>
                 <ul
                   role="list"
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:gap-8"
