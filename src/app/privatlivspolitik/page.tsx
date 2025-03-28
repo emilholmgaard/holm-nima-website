@@ -72,6 +72,18 @@ export default function Privatlivspolitik() {
               <p>
                 Bemærk, at det er nødvendigt, at du afgiver visse personoplysninger, for at du kan anvende vores hjemmesides kontaktformular. For eksempel har vi brug for dine kontaktoplysninger for at kunne besvare en henvendelse fra dig.
               </p>
+              <p>
+                Vi bruger Google Analytics på vores hjemmeside for at forbedre brugeroplevelsen og optimere vores indhold. Google Analytics indsamler anonymiseret data om besøg på vores hjemmeside, herunder:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Hvilke sider der besøges</li>
+                <li>Hvor længe besøgende er på hjemmesiden</li>
+                <li>Hvilke enheder der bruges til at besøge hjemmesiden</li>
+                <li>Hvilke lande besøgende kommer fra</li>
+              </ul>
+              <p>
+                Disse data er anonymiserede og indeholder ikke personlige oplysninger. Du kan til enhver tid tilbagetrække dit samtykke til brugen af Google Analytics via vores cookie-indstillinger.
+              </p>
             </div>
           </section>
 

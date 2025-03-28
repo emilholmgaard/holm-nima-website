@@ -8,10 +8,15 @@ type CookiePreferences = {
   necessary: boolean
   analytics: boolean
   consentDate?: string
+  expiryDate?: string
 }
 
 type CookieProvider = {
   name: string
+  description: string
+  website?: string
+  privacyPolicy?: string
+  dataProcessing?: string
   cookies: Array<{
     name: string
     description: string
@@ -36,6 +41,10 @@ const cookieCategories: CookieCategory[] = [
     providers: [
       {
         name: 'Nima Nabipour Advokatfirma',
+        description: 'Vores egen hjemmeside og systemer',
+        website: 'https://nima.dk',
+        privacyPolicy: '/privatlivspolitik',
+        dataProcessing: 'Vi behandler kun de data der er nødvendige for at hjemmesiden kan fungere. Data gemmes lokalt i din browser.',
         cookies: [
           {
             name: 'session_id',
@@ -55,6 +64,10 @@ const cookieCategories: CookieCategory[] = [
     providers: [
       {
         name: 'Google Analytics',
+        description: 'Google Analytics hjælper os med at forstå hvordan besøgende bruger vores hjemmeside',
+        website: 'https://analytics.google.com',
+        privacyPolicy: 'https://policies.google.com/privacy',
+        dataProcessing: 'Google Analytics indsamler anonymiseret data om besøg på vores hjemmeside. Data behandles i henhold til deres privatlivspolitik.',
         cookies: [
           {
             name: '_ga',
@@ -88,7 +101,16 @@ export function CookieConsent() {
   useEffect(() => {
     const savedConsent = localStorage.getItem('cookieConsent')
     if (savedConsent) {
-      setPreferences(JSON.parse(savedConsent))
+      const parsedConsent = JSON.parse(savedConsent)
+      setPreferences(parsedConsent)
+      
+      // Check if consent has expired (12 months)
+      if (parsedConsent.expiryDate) {
+        const expiryDate = new Date(parsedConsent.expiryDate)
+        if (expiryDate < new Date()) {
+          setShowConsent(true)
+        }
+      }
     } else {
       setShowConsent(true)
     }
@@ -99,6 +121,7 @@ export function CookieConsent() {
       necessary: true,
       analytics: true,
       consentDate: new Date().toISOString(),
+      expiryDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 12 months from now
     }
     setPreferences(newPreferences)
     savePreferences(newPreferences)
@@ -109,6 +132,7 @@ export function CookieConsent() {
       necessary: true,
       analytics: false,
       consentDate: new Date().toISOString(),
+      expiryDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 12 months from now
     }
     setPreferences(newPreferences)
     savePreferences(newPreferences)
@@ -125,6 +149,7 @@ export function CookieConsent() {
       ...prev,
       [category]: !prev[category],
       consentDate: new Date().toISOString(),
+      expiryDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 12 months from now
     }))
   }
 
@@ -174,6 +199,11 @@ export function CookieConsent() {
                     <p>
                       Dit samtykke gælder for: nima.dk
                     </p>
+                    {preferences.expiryDate && (
+                      <p>
+                        Dit samtykke udløber: {new Date(preferences.expiryDate).toLocaleDateString('da-DK')}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -213,12 +243,15 @@ export function CookieConsent() {
                             {category.providers.map((provider) => (
                               <div key={provider.name} className="border border-neutral-100 rounded p-3">
                                 <div className="flex items-center justify-between">
-                                  <h5 className="font-medium text-neutral-900">{provider.name}</h5>
+                                  <div>
+                                    <h5 className="font-medium text-neutral-900">{provider.name}</h5>
+                                    <p className="text-sm text-neutral-600">{provider.description}</p>
+                                  </div>
                                   <button
                                     onClick={() => setExpandedProvider(expandedProvider === provider.name ? null : provider.name)}
                                     className="text-sm text-blue-950 hover:underline"
                                   >
-                                    {expandedProvider === provider.name ? 'Skjul cookies' : 'Vis cookies'}
+                                    {expandedProvider === provider.name ? 'Skjul detaljer' : 'Se detaljer'}
                                   </button>
                                 </div>
                                 
@@ -228,9 +261,36 @@ export function CookieConsent() {
                                       initial={{ opacity: 0, height: 0 }}
                                       animate={{ opacity: 1, height: 'auto' }}
                                       exit={{ opacity: 0, height: 0 }}
-                                      className="mt-3"
+                                      className="mt-3 space-y-3"
                                     >
+                                      <div className="text-sm text-neutral-600">
+                                        <p className="font-medium mb-2">Data behandling:</p>
+                                        <p>{provider.dataProcessing}</p>
+                                      </div>
+                                      <div className="flex gap-4 text-sm">
+                                        {provider.website && (
+                                          <a
+                                            href={provider.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-950 hover:underline"
+                                          >
+                                            Besøg hjemmeside
+                                          </a>
+                                        )}
+                                        {provider.privacyPolicy && (
+                                          <a
+                                            href={provider.privacyPolicy}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-950 hover:underline"
+                                          >
+                                            Privatlivspolitik
+                                          </a>
+                                        )}
+                                      </div>
                                       <div className="space-y-2">
+                                        <p className="font-medium">Cookies:</p>
                                         {provider.cookies.map((cookie) => (
                                           <div key={cookie.name} className="text-sm text-neutral-600">
                                             <div className="font-medium">{cookie.name}</div>
