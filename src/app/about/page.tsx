@@ -73,26 +73,46 @@ const team = [
         name: 'Nima Nabipour',
         role: 'Advokat (H)',
         image: { src: nima, alt: 'Nima Nabipour' },
+        contact: {
+          email: 'nn@nima.dk',
+          phone: '61330043'
+        }
       },
       {
         name: 'Martin Due Lomholdt',
         role: 'Advokat (L)',
         image: { src: martin, alt: 'Martin Due Lomholdt' },
+        contact: {
+          email: 'ml@nima.dk',
+          phone: '61306763'
+        }
       },
       {
         name: 'Karsten Rifbjerg Erichsen',
         role: 'Advokat',
         image: { src: karsten, alt: 'Karsten Rifbjerg Erichsen' },
+        contact: {
+          email: 'ke@nima.dk',
+          phone: '31411066'
+        }
       },
       {
         name: 'Samer Hussein Younes',
         role: 'Advokat',
         image: { src: samer, alt: 'Samer Hussein Younes' },
+        contact: {
+          email: 'sy@nima.dk',
+          phone: '31410286'
+        }
       },
       {
         name: 'Linnea Steen Bluitgen',
         role: 'Advokat',
         image: { src: linnea, alt: 'Linnea Steen Bluitgen' },
+        contact: {
+          email: 'lb@nima.dk',
+          phone: '31335658'
+        }
       },
     ],
   },
@@ -101,18 +121,30 @@ const team = [
     people: [
       {
         name: 'Charlotte Holmgaard',
-        role: 'Sekretær',
+        role: 'Advokatsekretær',
         image: { src: charlotte, alt: 'Charlotte Holmgaard' },
+        contact: {
+          email: 'ch@nima.dk',
+          phone: '31383716'
+        }
       },
       {
         name: 'Kamilla',
         role: 'Stud jr',
         image: { src: imageAngelaFisher, alt: 'Kamilla' },
+        contact: {
+          email: 'kontakt@nima.dk',
+          phone: '61330043'
+        }
       },
       {
         name: 'Lotte',
         role: 'Stud jr',
         image: { src: imageBenjaminRussel, alt: 'Lotte' },
+        contact: {
+          email: 'kontakt@nima.dk',
+          phone: '61330043'
+        }
       },
     ],
   },
@@ -152,6 +184,10 @@ function Team() {
                               <p className="mt-2 text-sm text-white">
                                 {person.role}
                               </p>
+                              <div className="mt-2 text-xs text-white/80">
+                                <p>{person.contact.email}</p>
+                                <p>{person.contact.phone}</p>
+                              </div>
                             </div>
                           </div>
                         </Link>

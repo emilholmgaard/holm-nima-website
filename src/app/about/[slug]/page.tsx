@@ -182,9 +182,20 @@ Retskreds: Frederiksberg`,
   {
     slug: 'charlotte-holmgaard',
     name: 'Charlotte Holmgaard',
-    role: 'Sekretær',
+    role: 'Advokatsekretær',
     image: { src: charlotte, alt: 'Charlotte Holmgaard' },
-    bio: 'Charlotte er en erfaren sekretær, der sikrer effektiv håndtering af vores klienters sager og behov.',
+    bio: `Advokatsekretær Charlotte Holmgaard har over 35 års erfaring inden for det strafferetlige område, og har tidligere arbejdet hos nogle af landets fremtrædende forsvarsadvokater.
+Charlotte Holmgaard har indgående kendskab til domstolenes, politiets, anklagemyndighedens og kriminalforsorgens struktur, processer og arbejdsmetoder.
+Charlotte Holmgaard bistår med at arrangere besøg i arresthuse og sikrede insitutioner for klienternes pårørende, og vil løbende holde dem orienteret om sagens forløb. Hun vil ligeledes stå for at indkalde klienterne til møde forud for hovedforhandlingerne i retten.
+Charlotte Holmgaard har derudover stor erfaring med køb/salg af fast ejendom, ligesom hun i adskillige år har beskæftiget sig indgående med familieretlige forhold, herunder i forbindelse med udarbejdelse af ægtepagter, testamenter, lånedokumenter, behandling af dødsboer, bodeling i forbindelse med skilsmisser mv.
+Der findes ingen advokatsekretær i branchen, der har så stor passion for klienterne og deres sager, og som er tilgængelig over for klienterne i alle døgnets timer.
+Med Charlotte Holmgaard på holdet, er advokatfirmaet beriget med en medarbejder, der altid yder sit ypperste for at sikre, at klienterne i forløbet op til hovedforhandlingen løbende orienteres om sagens status og gang, og er behjælpelig med de eventuelle praktiske spørgsmål, der måtte opstå undervejs.
+Samtidig er Charlotte Holmgaard kontorets velkendte stemme udadtil, når politiet, retterne, ejendomsmæglerne og andre professionelle aktører skal kontaktes, for at sikre klienterne det mest optimale flow i sagerne.
+Engagement, passion og fingerspitzengefühl kendetegner Charlotte Holmgaard.
+
+Kontakt:
+Telefon: 31 38 37 16
+E-mail: ch@nima.dk`,
   },
   {
     slug: 'kamilla',
