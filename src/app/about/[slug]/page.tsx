@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Inter } from 'next/font/google'
 
 import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
@@ -17,6 +18,13 @@ import charlotte from '@/images/team/charlotte.webp'
 import samer from '@/images/team/samer.webp'
 import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
 import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
+import NimaImage from '@/public/images/team/nima.jpg'
+import KarstenImage from '@/public/images/team/karsten.jpg'
+import SamerImage from '@/public/images/team/samer.jpg'
+import LinneaImage from '@/public/images/team/linnea.jpg'
+import CharlotteImage from '@/public/images/team/charlotte.jpg'
+
+const inter = Inter({ subsets: ['latin'] })
 
 const team = [
   {
@@ -233,7 +241,27 @@ export async function generateMetadata({
   }
 }
 
-export default function Profile({ params }: { params: { slug: string } }) {
+function Video({ videoId }: { videoId: string }) {
+  return (
+    <div className="relative w-full h-[600px]">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${videoId}?si=o6SK77BGjigF4Ipv&controls=0&autoplay=1&mute=1&loop=1&playlist=${videoId}&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=https://holm-nima.dk&vq=hd2160`}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{
+          transform: 'scale(1.5)',
+          transformOrigin: 'center top',
+          marginTop: '0%'
+        }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+        title="Team Member Video"
+      />
+    </div>
+  )
+}
+
+function Profile({ params }: { params: { slug: string } }) {
   const member = team.find((member) => member.slug === params.slug)
   if (!member) notFound()
 
@@ -259,14 +287,26 @@ export default function Profile({ params }: { params: { slug: string } }) {
         <div className="space-y-16">
           <FadeIn>
             <div className="relative overflow-hidden rounded-3xl bg-neutral-100">
-              <Image
-                src={member.image.src}
-                alt={member.image.alt}
-                width={member.image.src.width}
-                height={member.image.src.height}
-                className="h-[600px] w-full object-cover"
-                priority
-              />
+              {member.slug === 'nima-nabipour' ? (
+                <Video videoId="rfKrk8VfyRo" />
+              ) : member.slug === 'charlotte-holmgaard' ? (
+                <Video videoId="LG11d13EUvU" />
+              ) : member.slug === 'martin-due-lomholdt' ? (
+                <Video videoId="7kUT3KbTIB8" />
+              ) : member.slug === 'linnea-steen-bluitgen' ? (
+                <Video videoId="tIj8NqyPadw" />
+              ) : member.slug === 'karsten-rifbjerg-erichsen' ? (
+                <Video videoId="zJryac91Ut0" />
+              ) : (
+                <Image
+                  src={member.image.src}
+                  alt={member.image.alt}
+                  width={member.image.src.width}
+                  height={member.image.src.height}
+                  className="h-[600px] w-full object-cover"
+                  priority
+                />
+              )}
             </div>
           </FadeIn>
           <FadeIn>
@@ -353,4 +393,6 @@ export default function Profile({ params }: { params: { slug: string } }) {
       <ContactSection />
     </>
   )
-} 
+}
+
+export default Profile 
