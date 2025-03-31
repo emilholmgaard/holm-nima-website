@@ -1,0 +1,58 @@
+import logo from '@/images/clients/phobia/logo-light.svg'
+import imageHero from '@/images/copenhagen.jpg'
+import imageJennyWilson from './jenny-wilson.jpg'
+
+export const caseStudy = {
+  client: 'Udlejningsret/flygtningret',
+  title: 'Specialister i udlejningsret og flygtningret',
+  description:
+    'Vi er specialister i udlejningsret og flygtningret og hjælper vores klienter med at navigere i komplekse udlejnings- og flygtningesager.',
+  summary: [
+    'Vi er specialister i udlejningsret og flygtningret og hjælper vores klienter med at navigere i komplekse udlejnings- og flygtningesager.',
+    'Vores erfaring og ekspertise sikrer den bedste rådgivning og sikkerhed for vores klienters udlejnings- og flygtningesager.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-03',
+  service: 'Udlejningsret/flygtningret',
+  testimonial: {
+    author: { name: 'Samer Hussein Younes', role: 'Advokat' },
+    content:
+      'Vi er dedikerede til at sikre den bedste rådgivning og sikkerhed for vores klienters udlejnings- og flygtningesager. Vores erfaring og ekspertise inden for udlejningsret og flygtningret giver os mulighed for at levere den bedste løsning.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Sagstype`,
+  description: caseStudy.description,
+}
+
+## Oversigt
+
+Vi er specialister i udlejningsret og flygtningret og har mange års erfaring med at håndtere komplekse udlejnings- og flygtningesager. Vores team af erfarne advokater sikrer, at vores klienter får den bedste rådgivning og sikkerhed.
+
+Vi arbejder med alle aspekter af udlejningsret og flygtningret, herunder lejekontrakter, udlejningsforhold, asylsager og familiesammenføring. Vores dedikation til vores klienter og deres retssikkerhed er central i vores arbejde.
+
+## Hvad vi gør
+
+<TagList>
+  <TagListItem>Udlejningsret</TagListItem>
+  <TagListItem>Flygtningret</TagListItem>
+  <TagListItem>Lejekontrakter</TagListItem>
+  <TagListItem>Asylsager</TagListItem>
+  <TagListItem>Familiesammenføring</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Samer Hussein Younes', role: 'Advokat' }}
+  image={{ src: imageJennyWilson }}
+>
+  Vi er dedikerede til at sikre den bedste rådgivning og sikkerhed for vores klienters udlejnings- og flygtningesager. Vores erfaring og ekspertise inden for udlejningsret og flygtningret giver os mulighed for at levere den bedste løsning.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="5" label="Erfarne advokater" />
+  <StatListItem value="1000+" label="Tilfredse klienter" />
+  <StatListItem value="10000+" label="Håndterede sager" />
+  <StatListItem value="100%" label="Dedikation" />
+</StatList>

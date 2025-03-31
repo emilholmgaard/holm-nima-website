@@ -30,7 +30,7 @@ const team = [
   {
     slug: 'nima-nabipour',
     name: 'Nima Nabipour',
-    role: 'Advokat (H)',
+    role: 'Advokat (H) - Møderet for højesteret',
     image: { src: nima, alt: 'Nima Nabipour' },
     bio: `Advokat Nima Nabipour har Møderet for Højesteret og er højt specialiseret inden for det strafferetlige område. Han har været forsvarer i nogle af landets mest profilerede og spektakulære straffesager i de senere år.
 
@@ -51,23 +51,23 @@ Med Nima Nabipour ved din side er du sikret en grundig, effektiv og passioneret 
 Ekspertise, passion og gennemslagskraft er det der kendetegner advokat Nima Nabipour.
 
 Arbejdsområder:
-• Ejendomshandler
-• Familieret- og personret
-• Strafferet
-
-Beskikkelsesår: 2015
-Møderet for landsret: Ja
-Møderet for højesteret: Ja
+• Familieret
+• Forældremyndighed/bopæl/samvær
+• Børneret
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
+• Alle aldre
 
 Kontakt:
 E-mail: nn@nima.dk
-Mobiltlf.: 61330043
-Retskreds: Frederiksberg`,
+Mobiltlf.: 61330043`,
   },
   {
     slug: 'martin-due-lomholdt',
     name: 'Martin Due Lomholdt',
-    role: 'Advokat (L)',
+    role: 'Advokat (L) - Møderet for landsret',
     image: { src: martin, alt: 'Martin Due Lomholdt' },
     bio: `Advokat Martin Due Lomholdt har Møderet for Landsretten og har igennem flere år specialiseret sig indenfor alle typer af straffesager. Han fører alt fra små til nogle af de mest omfattende sager her i landet og hans resultater taler deres klare sprog.
 
@@ -80,18 +80,18 @@ Advokat Martin Due Lomholdt sætter en ære i at være tilgængelig for sine kli
 Tilgængelig, grundig og ihærdig kendetegner advokat Martin Due Lomholdt.
 
 Arbejdsområder:
-• Strafferet
 • Familieret
+• Forældremyndighed/bopæl/samvær
 • Børneret
-
-Beskikkelsesår: 2022
-Møderet for landsret: Ja
-Møderet for højesteret: Nej
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
+• Alle aldre
 
 Kontakt:
 Telefon: 61 30 67 63
-E-mail: ml@nima.dk
-Retskreds: Frederiksberg`,
+E-mail: ml@nima.dk`,
   },
   {
     slug: 'karsten-rifbjerg-erichsen',
@@ -99,7 +99,7 @@ Retskreds: Frederiksberg`,
     role: 'Advokat',
     image: { src: karsten, alt: 'Karsten Rifbjerg Erichsen' },
     bio: `Advokat Karsten Rifbjerg Erichsen har arbejdet ved domstolene i 20 år som dommer (kst) og funktionschef.
-Han har været ansat ved flere byretter, Sø- og Handelsretten, Østre Landsret og Højesteret.
+Han har været ansat ved flere byretter, Sø-og Handelsretten, Østre Landsret og Højesteret.
 Senest har han været chef for retsafdelingen og administrationschef ved Retten i Hillerød.
 
 Advokat Karsten Rifbjerg Erichsen har igennem årene behandlet og afgjort utallige retssager og har således indgående erfaring med straffesager, familiesager og civile sager i øvrigt.
@@ -113,18 +113,18 @@ På baggrund af Karsten Rifbjerg Erichsens mangeårige erfaring fra domstolene v
 Dedikation, grundighed og ordentlighed kendetegner advokat Karsten Rifbjerg Erichsen.
 
 Arbejdsområder:
-• Familieret-og personret
-• Retssager
-• Strafferet
-
-Beskikkelsesår: 2021
-Møderet for landsret: Nej
-Møderet for højesteret: Nej
+• Familieret
+• Forældremyndighed/bopæl/samvær
+• Børneret
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
+• Alle aldre
 
 Kontakt:
 E-mail: ke@nima.dk
-Mobiltlf.: 31411066
-Retskreds: Frederiksberg`,
+Mobiltlf.: 31411066`,
   },
   {
     slug: 'samer-hussein-younes',
@@ -144,17 +144,18 @@ Advokat Samer Younes taler udover dansk og engelsk flydende arabisk og beskæfti
 Dedikeret, detaljeorienteret og analytisk stærk kendetegner Advokat Samer Younes.
 
 Arbejdsområder:
-• Strafferet
 • Familieret
-
-Beskikkelsesår: 2023
-Møderet for landsret: Nej
-Møderet for højesteret: Nej
+• Forældremyndighed/bopæl/samvær
+• Børneret
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
+• Alle aldre
 
 Kontakt:
 Telefon: 31 41 02 86
-E-mail: sy@nima.dk
-Retskreds: Frederiksberg`,
+E-mail: sy@nima.dk`,
   },
   {
     slug: 'linnea-steen-bluitgen',
@@ -174,18 +175,19 @@ Når klienter henvender sig til advokat Linnea Steen Bluitgen, kan de være sikr
 Faglighed, grundighed og fordomsfri dedikation kendetegner advokat Linnea Steen Bluitgen.
 
 Arbejdsområder:
-• Familieret- og personret
-• Retssager
-• Strafferet
-
-Beskikkelsesår: 2023
-Møderet for landsret: Nej
-Møderet for højesteret: Nej
+• Familieret
+• Forældremyndighed/bopæl/samvær
+• Børneret
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
+• Alle aldre
+• Injuriesager
 
 Kontakt:
 Telefon: 31 33 56 58
-E-mail: lb@nima.dk
-Retskreds: Frederiksberg`,
+E-mail: lb@nima.dk`,
   },
   {
     slug: 'charlotte-holmgaard',
@@ -272,7 +274,7 @@ function Profile({ params }: { params: { slug: string } }) {
     .map((m) => ({
       title: m.name,
       description: m.role,
-      href: `/about/${m.slug}`,
+      href: `/profiler/${m.slug}`,
       image: m.image.src,
       date: '2024-01-01',
     }))
@@ -354,27 +356,6 @@ function Profile({ params }: { params: { slug: string } }) {
                           <p key={line} className="mt-1">{line}</p>
                         ))}
                     </div>
-                  </div>
-                )}
-
-                {(member.slug === 'karsten-rifbjerg-erichsen' || member.slug === 'nima-nabipour' || member.slug === 'martin-due-lomholdt' || member.slug === 'samer-hussein-younes' || member.slug === 'linnea-steen-bluitgen') && (
-                  <div className="mt-24 text-center">
-                    <Link 
-                      href={member.slug === 'karsten-rifbjerg-erichsen' 
-                        ? "https://www.advokatnoeglen.dk/advokat/karsten-rifbjerg"
-                        : member.slug === 'nima-nabipour'
-                        ? "https://www.advokatnoeglen.dk/advokat/nima"
-                        : member.slug === 'martin-due-lomholdt'
-                        ? "https://www.advokatnoeglen.dk/advokat/martin-due"
-                        : member.slug === 'samer-hussein-younes'
-                        ? "https://www.advokatnoeglen.dk/advokat/samer-hussein"
-                        : "https://www.advokatnoeglen.dk/advokat/sigrid-linnea-steen"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-900"
-                    >
-                      Se mere på Advokatnøglen
-                    </Link>
                   </div>
                 )}
               </div>

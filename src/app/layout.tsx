@@ -123,7 +123,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Om os",
-                  "item": "https://holm-nima.dk/about"
+                  "item": "https://holm-nima.dk/profiler"
                 },
                 {
                   "@type": "ListItem",

@@ -71,7 +71,7 @@ const team = [
     people: [
       {
         name: 'Nima Nabipour',
-        role: 'Advokat (H)',
+        role: 'Advokat (H) - Møderet for højesteret',
         image: { src: nima, alt: 'Nima Nabipour' },
         contact: {
           email: 'nn@nima.dk',
@@ -80,7 +80,7 @@ const team = [
       },
       {
         name: 'Martin Due Lomholdt',
-        role: 'Advokat (L)',
+        role: 'Advokat (L) - Møderet for landsret',
         image: { src: martin, alt: 'Martin Due Lomholdt' },
         contact: {
           email: 'ml@nima.dk',
@@ -171,7 +171,7 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <Link href={`/about/${person.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <Link href={`/profiler/${person.name.toLowerCase().replace(/\s+/g, '-')}`}>
                           <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                             <Image
                               {...person.image}

@@ -388,10 +388,10 @@ export default function Process() {
           </div>
 
           <Blockquote
-            author={{ name: 'Nima Nabipour', role: 'Advokat' }}
+            author={{ name: 'Nima Nabipour', role: 'Advokat (H)' }}
             className="mt-12"
           >
-            Tiltaleskriftet er grundlaget for retssagen. Vi sikrer, at det bliver grundigt analyseret og at din forsvarsstrategi er optimal.
+            Vi er dedikerede til at sikre den bedste forsvarsstrategi og retssikkerhed for vores klienter. Vores erfaring og ekspertise giver os mulighed for at levere den bedste rådgivning.
           </Blockquote>
         </Section>
 

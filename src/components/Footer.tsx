@@ -9,23 +9,22 @@ const navigation = [
   {
     title: 'Specialer',
     links: [
-      { title: 'Strafferet', href: '/work/strafferet' },
-      { title: 'Familieret', href: '/work/family-fund' },
-      { title: 'Retssager', href: '/work/unseal' },
+      { title: 'Strafferet', href: '/specialer/strafferet' },
+      { title: 'Familieret', href: '/specialer/family-fund' },
       {
         title: (
           <>
             Se alle <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '/work',
+        href: '/specialer',
       },
     ],
   },
   {
     title: 'Virksomhed',
     links: [
-      { title: 'Om os', href: '/about' },
+      { title: 'Om os', href: '/profiler' },
       { title: 'Forløb', href: '/process' },
       { title: 'Seneste resultater', href: '/blog' },
       { title: 'Praktisk info', href: '/praktisk-info' },

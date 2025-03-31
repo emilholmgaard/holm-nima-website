@@ -147,8 +147,8 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Specialer</NavigationItem>
-        <NavigationItem href="/about">Profiler & værdier</NavigationItem>
+        <NavigationItem href="/specialer">Specialer</NavigationItem>
+        <NavigationItem href="/profiler">Profiler & værdier</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">Forløb</NavigationItem>

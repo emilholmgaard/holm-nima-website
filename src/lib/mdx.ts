@@ -61,13 +61,12 @@ export function loadArticles() {
 }
 
 export function loadCaseStudies() {
-  return loadEntries<CaseStudy>('work', 'caseStudy').then((entries) => {
+  return loadEntries<CaseStudy>('specialer', 'caseStudy').then((entries) => {
     // Define the desired order
     const order = [
       'Strafferet',
       'Familieret og personret',
-      'Retssager (procedure)',
-      'Ejendomshandler'
+      'Udlejningsret/flygtningret'
     ];
     
     // Sort entries based on the defined order
