@@ -26,11 +26,13 @@ const cases = [
   {
     title: 'Britta Nielsen Sagen',
     outcome: 'Frifindelse',
+    description: 'Danmarks største skattesag',
     links: []
   },
   {
     title: 'Hamdi Sakatni',
     outcome: 'Frifindelse',
+    description: 'Skyderi i Sønderborg',
     links: [
       'https://www.seoghoer.dk/krimi/skyderi-i-soenderborg-tre-maend-loesladt-og-frifundet-drabsforsoeg',
       'https://www.domstol.dk/soenderborg/aktuelt/2024/10/frifundet-for-forsoeg-paa-manddrab/',
@@ -40,6 +42,7 @@ const cases = [
   {
     title: 'Jokeren',
     outcome: 'Frifindelse',
+    description: 'Knivsag i København',
     links: [
       'https://nyheder.tv2.dk/krimi/2025-02-25-jokeren-frifundet-foldekniv-var-okay',
       'https://gaffa.dk/nyheder-fra-gaffa/2025/februar/jokeren-frifindes-i-kniv-sag/'
@@ -48,6 +51,7 @@ const cases = [
   {
     title: 'Bashir',
     outcome: 'Frifindelse',
+    description: 'Drabssag fra Herning',
     links: [
       'https://www.domstol.dk/vestrelandsret/aktuelt/2024/2/forvaring-og-udvisning-for-manddrab/',
       'https://politiken.dk/danmark/art9748798/Landsret-omstøder-dom-og-frifinder-to-mænd-i-drabssag-fra-Herning',
@@ -57,6 +61,7 @@ const cases = [
   {
     title: 'Michael Wain',
     outcome: 'Frifindelse',
+    description: 'Vold og røveri i Holstebro',
     links: [
       'https://dagbladet-holstebro-struer.dk/holstebro/i-byretten-fik-han-14-maaneders-faengsel-for-vold-og-roeveri-nu-har-landsretten-omstoedt-dommen'
     ]
@@ -64,6 +69,7 @@ const cases = [
   {
     title: 'Ghaith',
     outcome: 'Frifindelse',
+    description: 'Voldtægtssag i Fyn',
     links: [
       'https://ekstrabladet.dk/krimi/tre-maend-frifundet-for-anklage-om-voldtaegt-af-polsk-kvinde/9529945',
       'https://fyens.dk/112/tre-syriske-maend-frifundet-for-voldtaegt-slipper-for-udvisning-og-flere-aars-faengsel'
@@ -72,6 +78,7 @@ const cases = [
   {
     title: 'Sønderborg voldtægt',
     outcome: 'Frifindelse',
+    description: 'Voldtægtssag i Sønderborg',
     links: [
       'https://jv.dk/soenderborg/19-aarig-blev-idoemt-haard-straf-og-udvisning-nu-er-han-frifundet-blev-baaret-ud-af-retten-i-stor-hyldest-fra-vennerne'
     ]
@@ -79,6 +86,7 @@ const cases = [
   {
     title: 'Karsten Sønderborg',
     outcome: 'Frifindelse',
+    description: 'Psykose og svampe i sommerhus',
     links: [
       'https://jv.dk/soenderborg/ung-mand-indtog-svampe-og-gik-amok-i-sommerhusomraade-troede-han-saa-kinesiske-agenter-og-var-engelsk-prinsesse'
     ]
@@ -86,6 +94,7 @@ const cases = [
   {
     title: 'Operation Goldfinger',
     outcome: 'Frifindelse',
+    description: 'Største pengesæk-sag i Danmark',
     links: [
       'https://politiken.dk/danmark/art9673652/»Når-seddeltælleren-var-færdig-med-én-bunke-sludrede-de-lidt.-Og-så-begyndte-den-igen«',
       'https://www.tv2kosmopol.dk/koebenhavn/15-maend-er-blevet-tiltalt-i-operation-goldfinger'
@@ -94,6 +103,7 @@ const cases = [
   {
     title: 'Eshak',
     outcome: 'Påtaleopgivelse',
+    description: 'Skuddrab i Herlev',
     links: [
       'https://avisendanmark.dk/danmark/25-aarig-er-faengslet-i-sag-om-skuddrab-i-herlev'
     ]
@@ -101,6 +111,7 @@ const cases = [
   {
     title: 'Terrorsigtelse',
     outcome: 'Påtaleopgivelse',
+    description: 'Terrorforsøg i Århus',
     links: [
       'https://www.dr.dk/nyheder/indland/mand-sigtet-terror-forsoegte-meje-fodgaengere-ned-i-gaagade-i-aarhus'
     ]
@@ -108,6 +119,7 @@ const cases = [
   {
     title: 'Terrorsigtelse Karzoun',
     outcome: 'Påtaleopgivelse',
+    description: 'Terrorsag med Hamas-tilknytning',
     links: [
       'https://nyheder.tv2.dk/krimi/2024-01-12-terrorsag-i-danmark-har-traade-til-hamas'
     ]
@@ -143,8 +155,11 @@ function Clients() {
                     <div className="text-white text-base font-semibold group-hover:text-blue-200">
                       {case_.title}
                     </div>
-                    <div className="text-white/80 text-xs">
+                    <div className="text-white text-sm font-medium mt-1">
                       {case_.outcome}
+                    </div>
+                    <div className="text-white/80 text-xs mt-1">
+                      {case_.description}
                     </div>
                   </a>
                 </FadeIn>

@@ -51,6 +51,7 @@ Med Nima Nabipour ved din side er du sikret en grundig, effektiv og passioneret 
 Ekspertise, passion og gennemslagskraft er det der kendetegner advokat Nima Nabipour.
 
 Arbejdsområder:
+• Strafferet
 • Familieret
 • Forældremyndighed/bopæl/samvær
 • Børneret
@@ -58,7 +59,6 @@ Arbejdsområder:
 • Børn- og ungeudvalg
 • Ankestyrelsen
 • UKN (Ungdomskriminalitetsnævnet)
-• Alle aldre
 
 Kontakt:
 E-mail: nn@nima.dk
@@ -80,6 +80,7 @@ Advokat Martin Due Lomholdt sætter en ære i at være tilgængelig for sine kli
 Tilgængelig, grundig og ihærdig kendetegner advokat Martin Due Lomholdt.
 
 Arbejdsområder:
+• Strafferet
 • Familieret
 • Forældremyndighed/bopæl/samvær
 • Børneret
@@ -87,7 +88,6 @@ Arbejdsområder:
 • Børn- og ungeudvalg
 • Ankestyrelsen
 • UKN (Ungdomskriminalitetsnævnet)
-• Alle aldre
 
 Kontakt:
 Telefon: 61 30 67 63
@@ -113,6 +113,7 @@ På baggrund af Karsten Rifbjerg Erichsens mangeårige erfaring fra domstolene v
 Dedikation, grundighed og ordentlighed kendetegner advokat Karsten Rifbjerg Erichsen.
 
 Arbejdsområder:
+• Strafferet
 • Familieret
 • Forældremyndighed/bopæl/samvær
 • Børneret
@@ -120,7 +121,6 @@ Arbejdsområder:
 • Børn- og ungeudvalg
 • Ankestyrelsen
 • UKN (Ungdomskriminalitetsnævnet)
-• Alle aldre
 
 Kontakt:
 E-mail: ke@nima.dk
@@ -131,7 +131,7 @@ Mobiltlf.: 31411066`,
     name: 'Samer Hussein Younes',
     role: 'Advokat',
     image: { src: samer, alt: 'Samer Hussein Younes' },
-    bio: `Advokat Samer Younes har afsluttet såvel sin juridiske bachelor- og kandidateksamen på Århus Universitet med et af de højeste snit på årgangen og har i en længere årrække været ansat hos anklagemyndigheden ved både Sydøstjyllands og Syd- og Sønderjyllands Politi.
+    bio: `Advokat Samer Younes har afsluttet såvel sin juridiske bachelor- og kandidateksamen på Århus Universitet med et af de højeste snit på årgangen og har i en længere årrække været ansat hos anklagemyndigheden ved både Sydøstjyllands og Syd-og Sønderjyllands Politi.
 
 Advokat Samer Younes har igennem sin tid som anklager gennemført utallige hovedforhandlinger i såvel små som større straffesager og har derfor en stor praktisk erfaring og et unikt kendskab til sagsgangene og håndteringen af straffesager. Samer kender således politi- og anklagemyndighedens arbejde indgående – alt sammen til gavn for vores klienter.
 
@@ -144,6 +144,7 @@ Advokat Samer Younes taler udover dansk og engelsk flydende arabisk og beskæfti
 Dedikeret, detaljeorienteret og analytisk stærk kendetegner Advokat Samer Younes.
 
 Arbejdsområder:
+• Strafferet
 • Familieret
 • Forældremyndighed/bopæl/samvær
 • Børneret
@@ -151,7 +152,6 @@ Arbejdsområder:
 • Børn- og ungeudvalg
 • Ankestyrelsen
 • UKN (Ungdomskriminalitetsnævnet)
-• Alle aldre
 
 Kontakt:
 Telefon: 31 41 02 86
@@ -175,6 +175,7 @@ Når klienter henvender sig til advokat Linnea Steen Bluitgen, kan de være sikr
 Faglighed, grundighed og fordomsfri dedikation kendetegner advokat Linnea Steen Bluitgen.
 
 Arbejdsområder:
+• Strafferet
 • Familieret
 • Forældremyndighed/bopæl/samvær
 • Børneret
@@ -182,8 +183,6 @@ Arbejdsområder:
 • Børn- og ungeudvalg
 • Ankestyrelsen
 • UKN (Ungdomskriminalitetsnævnet)
-• Alle aldre
-• Injuriesager
 
 Kontakt:
 Telefon: 31 33 56 58
@@ -202,6 +201,16 @@ Der findes ingen advokatsekretær i branchen, der har så stor passion for klien
 Med Charlotte Holmgaard på holdet, er advokatfirmaet beriget med en medarbejder, der altid yder sit ypperste for at sikre, at klienterne i forløbet op til hovedforhandlingen løbende orienteres om sagens status og gang, og er behjælpelig med de eventuelle praktiske spørgsmål, der måtte opstå undervejs.
 Samtidig er Charlotte Holmgaard kontorets velkendte stemme udadtil, når politiet, retterne, ejendomsmæglerne og andre professionelle aktører skal kontaktes, for at sikre klienterne det mest optimale flow i sagerne.
 Engagement, passion og fingerspitzengefühl kendetegner Charlotte Holmgaard.
+
+Arbejdsområder:
+• Strafferet
+• Familieret
+• Forældremyndighed/bopæl/samvær
+• Børneret
+• Tvangsfjernelser
+• Børn- og ungeudvalg
+• Ankestyrelsen
+• UKN (Ungdomskriminalitetsnævnet)
 
 Kontakt:
 Telefon: 31 38 37 16
@@ -322,7 +331,7 @@ function Profile({ params }: { params: { slug: string } }) {
                     <ul className="mt-2 list-disc pl-5">
                       {member.bio
                         .split('\n\nArbejdsområder:')[1]
-                        .split('\n\nBeskikkelsesår:')[0]
+                        .split('\n\n')[0]
                         .split('\n')
                         .filter(line => line.trim().startsWith('•'))
                         .map(line => line.trim())
@@ -332,7 +341,7 @@ function Profile({ params }: { params: { slug: string } }) {
                     </ul>
                   </div>
                 )}
-
+                
                 {member.bio.includes('Beskikkelsesår:') && (
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
