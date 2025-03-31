@@ -338,56 +338,73 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Forsvarsadvokater i straffesager | Professionel juridisk bistand',
-  description: 'Tilgængelige forsvarsadvokater for sigtede, tiltalte og anklagede. Vi er din repræsentant i retsystemet og giver juridisk bistand i straffesager. Kontakt os for professionel hjælp.',
-  keywords: 'forsvarsadvokat, straffesager, juridisk bistand, retshjælp, strafferet, forsvarsadvokater, retssystemet, sigtede, tiltalte, anklagede, advokatfirma, straffesag, retssag, forsvarsadvokatkontor, Nima Nabipour, Frederiksberg, strafferetsadvokat, straffesagsadvokat, forsvarsadvokat i København, forsvarsadvokat i Frederiksberg',
+  metadataBase: new URL('https://holm-nima.dk'),
+  title: {
+    default: 'NIMA Advokater - Erfarne forsvarsadvokater i København',
+    template: '%s | NIMA Advokater',
+  },
+  description: 'NIMA Advokater er et advokatfirma med fokus på strafferet, familieret og civile sager. Vi tilbyder professionel juridisk bistand med høj faglig standard.',
+  keywords: ['advokat', 'forsvarsadvokat', 'strafferet', 'familieret', 'København', 'advokatfirma'],
+  authors: [{ name: 'NIMA Advokater' }],
+  creator: 'NIMA Advokater',
+  publisher: 'NIMA Advokater',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: 'Forsvarsadvokater i straffesager | Professionel juridisk bistand',
-    description: 'Tilgængelige forsvarsadvokater for sigtede, tiltalte og anklagede. Vi er din repræsentant i retsystemet og giver juridisk bistand i straffesager.',
     type: 'website',
     locale: 'da_DK',
-    siteName: 'Nima Nabipour Advokatfirma ApS',
+    url: 'https://holm-nima.dk',
+    siteName: 'NIMA Advokater',
+    title: 'NIMA Advokater - Erfarne forsvarsadvokater i København',
+    description: 'NIMA Advokater er et advokatfirma med fokus på strafferet, familieret og civile sager. Vi tilbyder professionel juridisk bistand med høj faglig standard.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Nima Nabipour Advokatfirma ApS - Forsvarsadvokater i straffesager'
-      }
-    ]
+        alt: 'NIMA Advokater - Erfarne forsvarsadvokater i København',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forsvarsadvokater i straffesager | Professionel juridisk bistand',
-    description: 'Tilgængelige forsvarsadvokater for sigtede, tiltalte og anklagede. Vi er din repræsentant i retsystemet og giver juridisk bistand i straffesager.',
-    images: ['/images/twitter-image.jpg']
+    title: 'NIMA Advokater - Erfarne forsvarsadvokater i København',
+    description: 'NIMA Advokater er et advokatfirma med fokus på strafferet, familieret og civile sager. Vi tilbyder professionel juridisk bistand med høj faglig standard.',
+    images: ['/images/twitter-image.jpg'],
+    creator: '@nimaadvokater',
   },
-  robots: 'index, follow, max-image-preview:large',
+  verification: {
+    google: 'your-google-site-verification',
+    yandex: 'your-yandex-verification',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   alternates: {
     canonical: 'https://holm-nima.dk',
   },
-  authors: [{ name: 'Nima Nabipour Advokatfirma ApS' }],
-  category: 'Law Firm',
-  classification: 'Legal Services',
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    bing: 'your-bing-verification-code'
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#1e3a8a', // blue-950
-  manifest: '/manifest.json',
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-  applicationName: 'Nima Nabipour Advokatfirma ApS',
-  referrer: 'origin-when-cross-origin',
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: true
-  }
 }
 
 export default async function Home() {
